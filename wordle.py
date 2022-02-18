@@ -2,6 +2,7 @@ import enchant
 import re
 from random import shuffle
 from sys import exit
+from wordfreq import word_frequency
 d = enchant.Dict("en_US")
 
 # Capital A-Z when converted to ASCII
@@ -92,4 +93,4 @@ for i in range(6):
         print('Answer:', next(iter(possible)))
         exit(0)
     else:
-        print('Possible answers:', possible)
+        print('Possible answers:', sorted(list(possible), key=lambda x:-word_frequency(x, 'en')))
