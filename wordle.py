@@ -67,7 +67,8 @@ for i in range(6):
     for j in range(5):
         guessed_letter = guess[j]
         if result[j] == '0':
-            letters.remove(guessed_letter)
+            if guessed_letter in letters:
+                letters.remove(guessed_letter)
         elif result[j] == 'Y':
             if not guessed_letter in yellow_letters.keys():
                 yellow_letters[guessed_letter] = set()
