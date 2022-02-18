@@ -9,6 +9,8 @@ Everyone knows what Wordle is at this point, but if you don't it's a basic word 
 
 As you might expect, the bot does exceptionally well for narrowing down the last few letter choices, but struggles to come up with good suggestions in the early game simply due to how many possible letter combinations there are. Additionally, while a skilled human player can use logic to deduce answers within only a few guesses, the brute-force nature of the bot's method makes it so that while winning is all but guaranteed eventually, it will usually take 3-4 guesses at least to narrow down the letters.
 
+Another note: the bot picks letters deterministially from a list sorted by frequency of letters. However, this isn't exactly how real words work (vowels tend to be on the higher end of the list, but most words are not only vowels) so it's not entirely clear whether or not this methodology is sound.
+
 
 ## Future Plans?
 
