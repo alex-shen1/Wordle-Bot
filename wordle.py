@@ -89,7 +89,7 @@ for i in range(6):
 
     print()
     if len(possible) == 1:
-        print('Answer:', next(iter(s)))
+        print('Answer:', next(iter(possible)))
         exit(0)
     else:
         print('Possible answers:', possible)
